@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+  <main id="main-doc">
+
+
+    <div class="sidebar">
+     
+      <nav id="navbar">
+        <header>
+          Accessibility Documentation
+        </header>
+        <ul class="summary">
+          <a class="nav-link" href="#Text_Alternative" >
+            <li><p>Text Alternative</li>
+          </a>
+          <a class="nav-link" href="#When_Alt_Text_Should_Be_Left_Blank">
+            <li><p>When Alt Text Should Be Left Blank</p></li>
+          </a>
+          <a class="nav-link" href="#Use_Headings">
+            <li><p>Use Headings</p></li>
+          </a>
+          <a class="nav-link" href="#Main_Element">
+            <li><p>Main Element</p></li>
+          </a>
+          <a class="nav-link" href="#Article_Element">
+            <li><p>Article Element</p></li>
+          </a>
+          <a class="nav-link" href="#Header_Landmark">
+            <li><p>Header Landmark</p></li>
+          </a>
+        </ul>
+      </nav>
+    </div>
+
+
+    <section id="Text_Alternative" class="main-section">
+      <header>
+        
+          Text Alternative
+        
+        </header>
+      <p>
+        Alt text describes the content of the image and provides a
+        text-alternative for it. This helps in cases where the image fails to
+        load or can't be seen by a user. It's also used by search engines to
+        understand what an image contains to include it in search results.
+        Here's an example:
+      <pre>
+          <code>
+            &lt;img src="importantLogo.jpeg" alt="Company logo" &gt;
+          </code>
+        </pre>
+      </p>
+      <p>
+        You should always include an alt attribute on your image. Per HTML5
+        specification, this is now considered mandatory.
+      </p>
+    </section>
+
+
+    <section id="When_Alt_Text_Should_Be_Left_Blank" class="main-section">
+      <header> 
+        
+          When Alt Text Should be Left Blank
+       
+        </header>
+     
+      <p>
+        In situations when an image is already explained with text content, or
+        does not add meaning to a page, the img still needs an alt attribute,
+        but it can be set to an empty string.Here's an example:
+      <pre>
+          <code>&lt;img src="visualDecoration.jpeg" alt="" &gt;</code></pre>
+      </p>
+      <p>
+        For images with a caption, you may still want to include alt text,
+        since it helps search engines catalog the content of the image.
+      </p>
+    </section>
+
+
+    <section id="Use_Headings" class="main-section">
+      <header> 
+        
+         Use Headings
+        
+        </header>
+      
+      <p>
+        Each page should always have one (and only one) h1 element, which is
+        the main subject of your content.
+      <pre>
+          <code>
+            &lt;h1&gt;How to Become a Ninja&lt;/h1&gt;
+            &lt;main&gt;
+              &lt;h2&gt;Learn the Art of Moving Stealthily&lt;/h2&gt;
+              &lt;h3&gt;How to Hide in Plain Sight&lt;/h3&gt;
+              &lt;h3&gt;How to Climb a Wall&lt;/h3&gt;
+            &lt;/main&gt;
+          </code>
+        </pre>
+        <div id="markdown-1">
+
+        </div>
+      </p>
+      <p>
+        This and the other headings are used
+        in part by search engines to understand the topic of the page.
+      </p>
+    </section>
+
+
+    <section id="Main_Element" class="main-section">
+      <header>
+      
+          Main Element
+        
+        </header>
+      
+      <p>
+        The main element is used to wrap the main content, and there should be only one per page. It's meant to surround
+        the information that's related to the central topic of your page.
+        It's not meant to include:
+      <ul>
+        <li>items that repeat across pages;</li>
+        <li>navigation links;</li>
+        <li>banners.</li>
+      </ul>
+      <pre>
+            <code>
+              &lt;header&gt;
+              &lt;h1&gt;Weapons of the Ninja&lt;/h1&gt;
+               &lt;/header&gt;
+              &lt;main&gt;
+              &lt;/main&gt;
+            
+              &lt;footer&gt;&lt;/footer&gt;
+            </code>
+        </pre>
+      </p>
+      <p>
+        The main tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the
+        main content.
+      </p>
+    </section>
+
+
+    <section id="Article_Element" class="main-section">
+      <header> 
+      
+          Article Element
+       
+        </header>
+      
+      <p>
+        Article is another one of the new HTML5 elements that adds semantic meaning to your markup. article is a
+        sectioning element, and is used to wrap independent, self-contained content. The tag works well with:
+      <ul>
+        <li>blog entries;</li>
+        <li>forum posts;</li>
+        <li>news articles.</li>
+      </ul>
+      <pre>
+            <code>
+            &lt;h1&gt;Deep Thoughts with Master Camper Cat&lt;/h1&gt;
+            &lt;main&gt;
+            &lt;article&gt;
+            &lt;h2&gt;The Garfield Files: Lasagna as Training Fuel?&lt;/h2&gt;
+            &lt;p&gt;The internet is littered with varying opinions on nutritional paradigms,...&lt;/p&gt;
+            &lt;/article&gt;
+            </code>
+        </pre>
+      </p>
+    </section>
+
+
+    <section id="Header_Landmark" class="main-section">
+      <header> 
+        
+          Header Landmark
+        
+        </header>
+      
+      <p>
+        Header tag it's used to wrap introductory information or navigation links for its parent tag and works well
+        around content that's repeated at the top on multiple pages.
+      </p>
+      <p>
+        The header is meant for use in the bodytag of your HTML document. This is different than the head element, which
+        contains the page's title, meta information, etc.
+      <pre>
+            <code>
+              &lt;header&gt;
+              &lt;h1&gt;Training with Camper Cat&lt;/h1&gt;
+              &lt;/header&gt;
+            </code>
+        </pre>
+      </p>
+    </section>
+
+
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>

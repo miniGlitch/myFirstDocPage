@@ -1,0 +1,107 @@
+body {
+    padding-left: 310px;
+    margin: 0;
+    min-width: 290px;
+    color: #4d4e53;
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* --------SIDEBAR-------- */
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: 0;
+    background: rgb(185, 183, 183);
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+}
+
+h1 {
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: thin;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    list-style: none;
+    color: black;
+    font-size: 1em;
+    text-align: left;
+    display: block;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+#navbar ul {
+    height: 88%;
+    padding: 0;
+}
+
+#navbar li {
+    color: black;
+    border-bottom: 1px solid black;
+    list-style: none;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#navbar li p {
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* ----------MAIN------- */
+
+#main-doc header {
+    text-align: left;
+    margin: 0px;
+}
+
+#main-doc {
+    position: absolute;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+section article {
+    color: #4d4e53;
+    margin: 15px;
+    font-size: 0.96em;
+}
+
+section li {
+    margin: 15px 0px 0px 20px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #main-doc {
+        margin-left: -10px;
+    }
+}
